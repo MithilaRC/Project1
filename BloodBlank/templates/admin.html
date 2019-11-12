@@ -1,0 +1,12 @@
+{% include 'head.html' %}
+{% include 'leftmenu.html' %}
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <table style="background-color: brown; color: rosybrown" align="center" border="2">
+        <tr><th><h1>Admin Login</h1></th></tr>
+        <tr><th><input type="text" style="background-color: rosybrown" name="uname" placeholder="UserName" required></th></tr>
+        <tr><th><input type="password" name="pwd" style="background-color: rosybrown" placeholder="Password" required></th></tr>
+        <tr><th><button type="submit" style="background-color: rosybrown">Login</button></th></tr>
+    </tr>
+</table>
+</form>

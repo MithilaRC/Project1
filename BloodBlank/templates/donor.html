@@ -1,0 +1,11 @@
+{% include 'index.html' %}
+<form action="{% url 'donorhome' %}" method="post">
+    {% csrf_token %}
+    <table style="background-color: brown; color: rosybrown" align="center" border="2">
+        <tr><th><h1>Donor Login</h1></th></tr>
+        <tr><th><input type="text" style="background-color: rosybrown" name="uname" placeholder="UserName" required></th></tr>
+        <tr><th><input type="password" style="background-color: rosybrown" name="pwd" placeholder="Password" required></th></tr>
+        <tr><th><button type="submit" style="background-color: rosybrown">Login</button></th></tr>
+</table>
+</form>
+<a href="{% url 'donorreg' %}">New Registration</a>
